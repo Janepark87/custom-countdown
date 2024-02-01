@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏰</text></svg>" />
+
+		<title>Custome Countdown</title>
+
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/9c51e67353.js" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="video-container">
+			<video loop muted autoplay>
+				<source src="time.mp4" />
+			</video>
+		</div>
+
+		<div class="container">
+			<div id="form-container">
+				<div class="form--inner">
+					<h1>Create a Custom Countdown!</h1>
+					<form id="countdownForm">
+						<div class="input-group">
+							<label for="title">Title</label>
+							<input type="text" id="title" name="title" placeholder="What are you counting down to?" />
+						</div>
+
+						<div class="input-group">
+							<label for="date-picker">Select a Date</label>
+							<input type="date" id="date-picker" name="date" />
+						</div>
+
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+
+			<div id="countdown" hidden>
+				<div class="countdown--inner">
+					<h1 id="countdown-title">Countdown Title Here</h1>
+
+					<ul>
+						<li><span>0</span>Days</li>
+						<li><span>00</span>Hours</li>
+						<li><span>00</span>Minutes</li>
+						<li><span>00</span>Seconds</li>
+					</ul>
+					<button id="reset-btn">Reset</button>
+				</div>
+			</div>
+
+			<div id="complete" hidden>
+				<div class="complete--inner">
+					<h1 class="complete-title">Countdown Complete!</h1>
+					<h2 id="complete-info" class="h1"></h2>
+					<button id="complete-btn">New Countdown</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script src="script.js"></script>
+	</body>
+</html>
